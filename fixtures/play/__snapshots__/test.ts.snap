@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should mock correctly for other scope 1`] = `"mocked content"`;
-
-exports[`should mock correctly for same scope case 1 1`] = `"mocked content"`;
-
-exports[`should mock correctly for same scope case 2 1`] = `"mocked content"`;

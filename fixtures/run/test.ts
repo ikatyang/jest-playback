@@ -2,7 +2,7 @@ import * as request from 'request';
 
 test('should mock correctly', done => {
   request('http://example.org', (_err, _res, body) => {
-    expect(body).toMatchSnapshot();
+    expect(body).toBe('mocked content');
     done();
   });
 });
