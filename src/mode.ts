@@ -1,3 +1,4 @@
+import * as R from 'ramda';
 import {Action} from './action';
 import {PlayAction, RealAction, RecordAction, RunAction} from './actions/index';
 
@@ -28,8 +29,8 @@ export const enum Mode {
   Real = 'real',
 }
 
-export function mode_to_action(mode: Mode): Action {
-  switch (mode) {
+export function mode_to_action(mode: Mode, mode_env: string): Action {
+  switch (R.defaultTo(mode, process.env[mode_env])) {
     case Mode.Run:
       return new RunAction();
     case Mode.Play:
