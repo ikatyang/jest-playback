@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as glob from 'glob';
 import * as mkdir from 'make-dir';
-import * as mime from 'mime';
 import * as nock from 'nock';
 import * as path from 'path';
 import * as R from 'ramda';
