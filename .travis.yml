@@ -6,7 +6,6 @@ node_js:
 - stable
 
 before_install:
-- yarn global add codecov
 - yarn global add greenkeeper-lockfile@1
 
 before_script:
@@ -14,10 +13,9 @@ before_script:
 
 script:
 - yarn run lint
-- yarn run test -- --coverage --verbose
+- yarn run test -- --verbose
 
 after_script:
-- codecov
 - greenkeeper-lockfile-upload
 
 cache:

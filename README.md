@@ -2,7 +2,6 @@
 
 [![npm](https://img.shields.io/npm/v/jest-playback.svg)](https://www.npmjs.com/package/jest-playback)
 [![build](https://img.shields.io/travis/ikatyang/jest-playback/master.svg)](https://travis-ci.org/ikatyang/jest-playback/builds)
-[![coverage](https://img.shields.io/codecov/c/github/ikatyang/jest-playback/master.svg)](https://codecov.io/gh/ikatyang/jest-playback)
 [![greenkeeper](https://badges.greenkeeper.io/ikatyang/jest-playback.svg)](https://greenkeeper.io/)
 
 Record and playback http requests from your jest tests
