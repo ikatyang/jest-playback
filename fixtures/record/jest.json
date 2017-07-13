@@ -7,5 +7,6 @@
   "reporters": [
     "default",
     ["<rootDir>/../../lib/index.js", {"mode": "record"}]
-  ]
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/../setup.ts"
 }
