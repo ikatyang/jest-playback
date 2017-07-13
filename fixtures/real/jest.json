@@ -1,0 +1,11 @@
+{
+  "testEnvironment": "node",
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "testMatch": ["**/*.ts"],
+  "transform": {"\\.ts$": "ts-jest/preprocessor"},
+  "coverageReporters": ["lcov", "text-summary"],
+  "reporters": [
+    "default",
+    ["<rootDir>/../../lib/index.js", {"mode": "real"}]
+  ]
+}

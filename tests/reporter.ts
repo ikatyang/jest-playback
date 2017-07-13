@@ -13,3 +13,4 @@ const test_fixture = (test_fn: typeof test, name: string) => {
 
 test_fixture(test, 'play');
 test_fixture(test, 'run');
+test_fixture(test, 'real');
