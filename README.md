@@ -12,10 +12,10 @@ Record and playback http requests from your [Jest](https://facebook.github.io/je
 
 ```sh
 # using npm
-npm install --save jest-playback
+npm install --save-dev jest-playback
 
 # using yarn
-yarn add jest-playback
+yarn add --dev jest-playback
 ```
 ## Usage
 
