@@ -1,6 +1,6 @@
 {
   "name": "jest-playback",
-  "version": "0.0.0-dev",
+  "version": "1.0.0",
   "description": "Record and playback http requests from your Jest tests",
   "keywords": [
     "jest",
