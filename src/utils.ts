@@ -1,12 +1,11 @@
 import * as fs from 'fs';
 import * as glob from 'glob';
+import * as _ from 'lodash';
 import * as mkdir from 'make-dir';
 import * as nock from 'nock';
 import * as path from 'path';
-import * as R from 'ramda';
 import * as url from 'url';
 
-import kebabcase = require('lodash.kebabcase');
 import rev_hash = require('rev-hash');
 
 export function restore() {
@@ -68,13 +67,13 @@ function get_record_filename(record: nock.NockDefinition, dirname: string) {
 }
 
 function get_record_relative_dirname(record: nock.NockDefinition) {
-  return R.defaultTo('unknown', url.parse(record.scope).hostname);
+  return _.defaultTo<string>(url.parse(record.scope).hostname, 'unknown');
 }
 
 function get_record_basename(record: nock.NockDefinition) {
-  const method = R.defaultTo('unknown', record.method).toLowerCase();
+  const method = _.defaultTo<string>(record.method, 'unknown').toLowerCase();
   const [pathname] = record.path.split('?');
-  const formatted_pathname = kebabcase(pathname);
+  const formatted_pathname = _.kebabCase(pathname);
   const hash = rev_hash(`${method}+${record.status}+${record.scope}+${record.path}+${record.body}`);
   return (formatted_pathname.length === 0)
     ? `${method}+${hash}`

@@ -1,8 +1,8 @@
 import {GlobalConfig, Reporter as ReporterInterface} from 'jest-types';
+import * as _ from 'lodash';
 import * as path from 'path';
 import {Action, ActionOptions} from './action';
 import {mode_to_action, Mode} from './mode';
-import defaults = require('lodash.defaults');
 
 export interface ReporterOptions extends ActionOptions {
   mode: Mode;
@@ -26,7 +26,7 @@ export class Reporter implements ReporterInterface {
   }
 
   public init_options(options: Partial<ReporterOptions>) {
-    this.options = defaults(options, {
+    this.options = _.defaults(options, {
       debug: false,
       mode: Mode.Run,
       mode_env: 'JEST_PLAYBACK_MODE',

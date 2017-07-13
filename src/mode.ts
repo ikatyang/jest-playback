@@ -1,4 +1,4 @@
-import * as R from 'ramda';
+import * as _ from 'lodash';
 import {Action} from './action';
 import {PlayAction, RealAction, RecordAction, RunAction} from './actions/index';
 
@@ -30,7 +30,7 @@ export const enum Mode {
 }
 
 export function mode_to_action(mode: Mode, mode_env: string): Action {
-  switch (R.defaultTo(mode, process.env[mode_env])) {
+  switch (_.defaultTo<string>(process.env[mode_env], mode)) {
     case Mode.Run:
       return new RunAction();
     case Mode.Play:
