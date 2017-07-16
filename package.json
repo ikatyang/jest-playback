@@ -40,7 +40,7 @@
     "@types/jest": "20.0.2",
     "@types/lodash": "4.14.68",
     "@types/nock": "8.2.1",
-    "@types/node": "8.0.11",
+    "@types/node": "8.0.12",
     "@types/request": "0.0.46",
     "del": "3.0.0",
     "jest": "20.0.4",
