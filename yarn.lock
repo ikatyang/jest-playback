@@ -60,6 +60,10 @@
   version "4.14.69"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.69.tgz#2bbd48c1565e02506f48ed8d1e8e53ea493fd0e6"
 
+"@types/make-dir@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/make-dir/-/make-dir-1.0.0.tgz#d5552a4e4a3ac02470649e3d211b76f86ad029e0"
+
 "@types/minimatch@*":
   version "2.0.29"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-2.0.29.tgz#5002e14f75e2d71e564281df0431c8c1b4a2a36a"
@@ -83,6 +87,12 @@
   resolved "https://registry.yarnpkg.com/@types/request/-/request-2.0.0.tgz#7d6fd2a1ef48ad07d0e3333471b8267156d707a4"
   dependencies:
     "@types/form-data" "*"
+    "@types/node" "*"
+
+"@types/rev-hash@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/rev-hash/-/rev-hash-2.0.0.tgz#bbff5cfadfba61b09b8bb6d6b780c76c236234a1"
+  dependencies:
     "@types/node" "*"
 
 abab@^1.0.3:

@@ -1,4 +1,3 @@
-import {GlobalConfig, Reporter as ReporterInterface} from 'jest-types';
 import * as _ from 'lodash';
 import * as path from 'path';
 import {Action, ActionOptions} from './action';
@@ -9,13 +8,13 @@ export interface ReporterOptions extends ActionOptions {
   mode_env: string;
 }
 
-export class Reporter implements ReporterInterface {
+export class Reporter implements jest.Reporter {
 
-  public global_config: GlobalConfig;
+  public global_config: jest.GlobalConfig;
   public options: ReporterOptions;
   public action: Action;
 
-  constructor(global_config: GlobalConfig, options: Partial<ReporterOptions> = {}) {
+  constructor(global_config: jest.GlobalConfig, options: Partial<ReporterOptions> = {}) {
     this.global_config = global_config;
     this.init_options(options);
     this.init_action();
