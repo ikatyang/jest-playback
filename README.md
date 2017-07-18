@@ -12,11 +12,14 @@ Record and playback http requests from your [Jest](https://facebook.github.io/je
 
 ```sh
 # using npm
-npm install --save-dev jest-playback
+npm install --save-dev jest jest-playback
 
 # using yarn
-yarn add --dev jest-playback
+yarn add --dev jest jest-playback
 ```
+
+**NOTE**: This project uses the [`reporters`](https://facebook.github.io/jest/docs/en/configuration.html#reporters-array-modulename-modulename-options) field, which is available since Jest v20.
+
 ## Usage
 
 Modify your [Jest config](https://facebook.github.io/jest/docs/en/configuration.html) so that looks something like:
