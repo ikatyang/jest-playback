@@ -48,7 +48,7 @@
     "request": "2.81.0",
     "ts-jest": "20.0.7",
     "tslint": "5.5.0",
-    "tslint-config-ikatyang": "0.10.0",
+    "tslint-config-ikatyang": "1.0.1",
     "typescript": "2.4.2"
   },
   "peerDependencies": {
