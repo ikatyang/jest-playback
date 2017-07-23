@@ -60,9 +60,11 @@
   version "4.14.71"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.71.tgz#0dc383f78981216ac76e2f2c3afd998e0450e4c1"
 
-"@types/make-dir@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@types/make-dir/-/make-dir-1.0.0.tgz#d5552a4e4a3ac02470649e3d211b76f86ad029e0"
+"@types/make-dir@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/make-dir/-/make-dir-1.0.1.tgz#b2f80c8cb3b0977e112014b1b0381333a7188715"
+  dependencies:
+    "@types/node" "*"
 
 "@types/minimatch@*":
   version "2.0.29"
