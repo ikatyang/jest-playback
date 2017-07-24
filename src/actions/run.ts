@@ -1,5 +1,5 @@
-import {Action} from '../action';
-import {enable_net_connect, play_nocks, restore} from '../utils';
+import { Action } from '../action';
+import { enable_net_connect, play_nocks, restore } from '../utils';
 
 export class RunAction extends Action {
   public start() {
