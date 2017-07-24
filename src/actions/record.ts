@@ -1,5 +1,10 @@
-import {Action} from '../action';
-import {enable_net_connect, finish_record, restore, start_record} from '../utils';
+import { Action } from '../action';
+import {
+  enable_net_connect,
+  finish_record,
+  restore,
+  start_record,
+} from '../utils';
 
 export class RecordAction extends Action {
   public start() {

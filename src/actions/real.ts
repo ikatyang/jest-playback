@@ -1,5 +1,5 @@
-import {Action} from '../action';
-import {enable_net_connect, restore} from '../utils';
+import { Action } from '../action';
+import { enable_net_connect, restore } from '../utils';
 
 export class RealAction extends Action {
   public start() {

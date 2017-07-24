@@ -1,6 +1,11 @@
 import * as _ from 'lodash';
-import {Action} from './action';
-import {PlayAction, RealAction, RecordAction, RunAction} from './actions/index';
+import { Action } from './action';
+import {
+  PlayAction,
+  RealAction,
+  RecordAction,
+  RunAction,
+} from './actions/index';
 
 export const enum Mode {
   /**

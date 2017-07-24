@@ -1,2 +1,2 @@
-import {Reporter} from './reporter';
+import { Reporter } from './reporter';
 export = Reporter;
