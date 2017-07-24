@@ -13,6 +13,7 @@ before_script:
 
 script:
 - yarn run lint
+- yarn run format-check
 - yarn run test -- --verbose
 
 after_script:
