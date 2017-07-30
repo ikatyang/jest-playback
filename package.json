@@ -22,11 +22,9 @@
   "scripts": {
     "prepublish": "yarn run build",
     "lint": "tslint -p ./tsconfig.json --type-check -t stylish",
-    "test": "jest --config ./jest.json",
+    "test": "jest -c ./jest.json",
     "prebuild": "rm -rf ./lib",
-    "build": "tsc -p tsconfig.build.json",
-    "format": "gulp format",
-    "format-check": "gulp format-check"
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "glob": "^7.1.2",
@@ -38,23 +36,17 @@
   "devDependencies": {
     "@types/del": "2.2.32",
     "@types/glob": "5.0.30",
-    "@types/gulp": "3.8.33",
     "@types/jest": "20.0.5",
     "@types/lodash": "4.14.71",
     "@types/make-dir": "1.0.1",
     "@types/nock": "8.2.1",
     "@types/node": "8.0.17",
-    "@types/prettier": "1.5.0",
     "@types/request": "2.0.0",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
-    "gulp": "3.9.1",
-    "gulp-plugin-prettier": "1.0.0",
     "jest": "20.0.4",
-    "prettier": "1.5.3",
     "request": "2.81.0",
     "ts-jest": "20.0.7",
-    "ts-node": "3.3.0",
     "tslint": "5.5.0",
     "tslint-config-ikatyang": "2.0.1",
     "typescript": "2.4.2"
