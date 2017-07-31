@@ -80,12 +80,6 @@
   version "8.0.17"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.17.tgz#677bc8c118cfb76013febb62ede1f31d2c7222a1"
 
-"@types/prettier@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.5.0.tgz#35ed47a24bd92bcab439c3670742219499a6b717"
-  dependencies:
-    "@types/babel-types" "*"
-
 "@types/request@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/request/-/request-2.0.0.tgz#7d6fd2a1ef48ad07d0e3333471b8267156d707a4"
@@ -1892,11 +1886,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier-config-ikatyang@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/prettier-config-ikatyang/-/prettier-config-ikatyang-1.1.0.tgz#e837cb24deca8affc4fb172773df7ff0d161f77f"
-  dependencies:
-    "@types/prettier" "^1.5.0"
+prettier-config-ikatyang@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/prettier-config-ikatyang/-/prettier-config-ikatyang-1.1.1.tgz#9ccab4bc2d441e4c68b58dbe8f1a4e18213c3f2d"
 
 prettier@1.5.3:
   version "1.5.3"
