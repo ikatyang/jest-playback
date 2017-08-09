@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@types/del@2.2.32":
-  version "2.2.32"
-  resolved "https://registry.yarnpkg.com/@types/del/-/del-2.2.32.tgz#4d54df0ed3017435e6b1995df0292957787fc6b2"
+"@types/del@2.2.33":
+  version "2.2.33"
+  resolved "https://registry.yarnpkg.com/@types/del/-/del-2.2.33.tgz#3fbe8a1c3d00e85e9674e490a347eb419b1003a1"
   dependencies:
     "@types/glob" "*"
 
