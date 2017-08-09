@@ -34,7 +34,7 @@
     "rev-hash": "^2.0.0"
   },
   "devDependencies": {
-    "@types/del": "2.2.33",
+    "@types/del": "3.0.0",
     "@types/glob": "5.0.30",
     "@types/jest": "20.0.6",
     "@types/lodash": "4.14.72",
