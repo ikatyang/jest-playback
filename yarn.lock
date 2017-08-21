@@ -14,9 +14,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/glob@*", "@types/glob@5.0.31":
-  version "5.0.31"
-  resolved "https://registry.yarnpkg.com/@types/glob/-/glob-5.0.31.tgz#6cb8500bd170750c1948f785cc5828e9cff0c36a"
+"@types/glob@*", "@types/glob@5.0.32":
+  version "5.0.32"
+  resolved "https://registry.yarnpkg.com/@types/glob/-/glob-5.0.32.tgz#aec5cfe987c72f099fdb1184452986aa506d5e8f"
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
@@ -36,8 +36,8 @@
     "@types/node" "*"
 
 "@types/minimatch@*":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.0.tgz#a8b68c324817169b6004b432a598478a5d8f025a"
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.1.tgz#b683eb60be358304ef146f5775db4c0e3696a550"
 
 "@types/nock@8.2.1":
   version "8.2.1"
