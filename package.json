@@ -41,7 +41,7 @@
     "@types/make-dir": "1.0.1",
     "@types/nock": "8.2.1",
     "@types/node": "8.0.24",
-    "@types/request": "2.0.1",
+    "@types/request": "2.0.2",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
     "jest": "20.0.4",
