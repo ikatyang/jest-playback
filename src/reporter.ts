@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+import _ = require('lodash');
 import * as path from 'path';
 import { Action, ActionOptions } from './action';
 import { mode_to_action, Mode } from './mode';
