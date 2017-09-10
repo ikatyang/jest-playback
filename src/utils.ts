@@ -1,8 +1,8 @@
 import * as fs from 'fs';
-import * as glob from 'glob';
-import * as _ from 'lodash';
-import * as mkdir from 'make-dir';
-import * as nock from 'nock';
+import glob = require('glob');
+import _ = require('lodash');
+import mkdir = require('make-dir');
+import nock = require('nock');
 import * as path from 'path';
 import * as url from 'url';
 

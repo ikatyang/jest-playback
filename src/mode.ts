@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+import _ = require('lodash');
 import { Action } from './action';
 import {
   PlayAction,
