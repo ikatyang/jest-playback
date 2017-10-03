@@ -46,7 +46,7 @@
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
     "jest": "21.2.1",
-    "prettier": "1.7.3",
+    "prettier": "1.7.4",
     "prettier-config-ikatyang": "1.1.1",
     "request": "2.83.0",
     "standard-version": "4.2.0",
