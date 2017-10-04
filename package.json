@@ -42,7 +42,7 @@
     "@types/make-dir": "1.0.1",
     "@types/nock": "8.2.1",
     "@types/node": "8.0.32",
-    "@types/request": "2.0.3",
+    "@types/request": "2.0.4",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
     "jest": "21.2.1",
