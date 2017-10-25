@@ -39,7 +39,7 @@
     "@types/glob": "5.0.33",
     "@types/jest": "21.1.5",
     "@types/lodash": "4.14.78",
-    "@types/make-dir": "1.0.1",
+    "@types/make-dir": "1.0.2",
     "@types/nock": "8.2.1",
     "@types/node": "8.0.46",
     "@types/request": "2.0.6",
