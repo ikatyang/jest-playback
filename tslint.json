@@ -1,11 +1,11 @@
 {
   "extends": [
     "tslint-config-ikatyang",
-    "tslint-config-prettier-ext",
-    "tslint-plugin-prettier",
-    "prettier-config-ikatyang/tslint"
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
   ],
   "rules": {
+    "prettier": true,
     "prefer-function-over-method": false
   }
 }
