@@ -38,7 +38,7 @@
     "@types/del": "3.0.0",
     "@types/glob": "5.0.33",
     "@types/jest": "21.1.5",
-    "@types/lodash": "4.14.82",
+    "@types/lodash": "4.14.83",
     "@types/make-dir": "1.0.2",
     "@types/nock": "8.2.1",
     "@types/node": "8.0.50",
