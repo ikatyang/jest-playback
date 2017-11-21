@@ -37,7 +37,7 @@
   "devDependencies": {
     "@types/del": "3.0.0",
     "@types/glob": "5.0.33",
-    "@types/jest": "21.1.6",
+    "@types/jest": "21.1.7",
     "@types/lodash": "4.14.85",
     "@types/make-dir": "1.0.3",
     "@types/nock": "8.2.1",
