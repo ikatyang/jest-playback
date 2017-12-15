@@ -37,9 +37,9 @@
   version "21.1.8"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-21.1.8.tgz#d497213725684f1e5a37900b17a47c9c018f1a97"
 
-"@types/lodash@4.14.90":
-  version "4.14.90"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.90.tgz#c853f6747080215372aca5a3770fc62d65a05186"
+"@types/lodash@4.14.91":
+  version "4.14.91"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.91.tgz#794611b28056d16b5436059c6d800b39d573cd3a"
 
 "@types/make-dir@1.0.3":
   version "1.0.3"
