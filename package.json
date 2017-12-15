@@ -40,7 +40,7 @@
     "@types/jest": "21.1.8",
     "@types/lodash": "4.14.90",
     "@types/make-dir": "1.0.3",
-    "@types/nock": "8.2.1",
+    "@types/nock": "9.1.0",
     "@types/node": "8.5.1",
     "@types/request": "2.0.9",
     "@types/rev-hash": "2.0.0",
