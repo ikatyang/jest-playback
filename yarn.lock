@@ -51,9 +51,9 @@
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.1.tgz#b683eb60be358304ef146f5775db4c0e3696a550"
 
-"@types/nock@9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@types/nock/-/nock-9.1.1.tgz#0a1d5df5b9fe5b5ac90926156c58f1544ddd3cf5"
+"@types/nock@9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@types/nock/-/nock-9.1.2.tgz#0515b27e3f6bbc11834d22508ad02e2921dd376a"
   dependencies:
     "@types/node" "*"
 
