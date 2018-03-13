@@ -24,10 +24,7 @@ export function disable_net_connect() {
 }
 
 export function play_nocks(dirname: string) {
-  const records = load_records(dirname).map(record => ({
-    ...record,
-    options: { allowUnmocked: true },
-  }));
+  const records = load_records(dirname);
   nock.define(records).forEach(scope => scope.persist());
 }
 
