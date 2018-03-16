@@ -41,7 +41,7 @@
     "@types/lodash": "4.14.105",
     "@types/make-dir": "1.0.3",
     "@types/nock": "9.1.2",
-    "@types/node": "8.9.5",
+    "@types/node": "9.4.7",
     "@types/request": "2.47.0",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
