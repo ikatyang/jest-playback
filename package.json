@@ -48,7 +48,7 @@
     "jest": "21.2.1",
     "prettier": "1.12.1",
     "prettier-config-ikatyang": "1.1.1",
-    "request": "2.86.0",
+    "request": "2.87.0",
     "standard-version": "4.3.0",
     "ts-jest": "21.2.4",
     "tslint": "5.10.0",
