@@ -4,9 +4,5 @@
   "testMatch": ["**/*.ts"],
   "transform": {"\\.ts$": "ts-jest/preprocessor"},
   "coverageReporters": ["lcov", "text-summary"],
-  "reporters": [
-    "default",
-    ["<rootDir>/../../lib/index.js", {"mode": "run"}]
-  ],
   "setupTestFrameworkScriptFile": "<rootDir>/../setup.ts"
 }

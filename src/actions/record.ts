@@ -1,18 +1,20 @@
 import { Action } from '../action';
 import {
-  enable_net_connect,
-  finish_record,
-  restore,
-  start_record,
-} from '../utils';
+  activate,
+  deactivate,
+  enableNetConnect,
+  finishRecord,
+  startRecord,
+} from '../nock';
 
 export class RecordAction extends Action {
   public start() {
-    restore();
-    enable_net_connect();
-    start_record();
+    activate();
+    enableNetConnect();
+    startRecord();
   }
   public finish() {
-    finish_record(this.options.playbacks);
+    finishRecord(this.playbackDir);
+    deactivate();
   }
 }

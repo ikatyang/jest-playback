@@ -1,2 +1,1 @@
-import { Reporter } from './reporter';
-export = Reporter;
+export * from './setup';

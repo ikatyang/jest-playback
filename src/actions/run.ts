@@ -1,13 +1,13 @@
 import { Action } from '../action';
-import { enable_net_connect, play_nocks, restore } from '../utils';
+import { activate, deactivate, enableNetConnect, playRecord } from '../nock';
 
 export class RunAction extends Action {
   public start() {
-    restore();
-    enable_net_connect();
-    play_nocks(this.options.playbacks);
+    activate();
+    enableNetConnect();
+    playRecord(this.playbackDir);
   }
   public finish() {
-    // do nothing
+    deactivate();
   }
 }

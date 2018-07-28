@@ -1,3 +1,5 @@
+require('../../src/index').setup(__dirname, 'play');
+
 import * as request from 'request';
 
 it('should mock correctly for same scope case 1', done => {

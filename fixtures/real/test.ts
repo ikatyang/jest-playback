@@ -1,3 +1,5 @@
+require('../../src/index').setup(__dirname, 'real');
+
 import * as request from 'request';
 
 test('should return real content', done => {
