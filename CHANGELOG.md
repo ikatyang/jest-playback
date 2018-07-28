@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/ikatyang/jest-playback/compare/v1.0.1...v2.0.0) (2018-07-28)
+
+
+### Features
+
+* parallel testing ([#313](https://github.com/ikatyang/jest-playback/issues/313)) ([94c1de1](https://github.com/ikatyang/jest-playback/commit/94c1de1))
+
+
+### BREAKING CHANGES
+
+- directly use `require` to setup instead of using `reporter`
+- drop options
+  - `playbacks` and `mode_env` are not configurable
+  - completely dropped `debug`
+  - moved `mode` to the setup API
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/ikatyang/jest-playback/compare/v1.0.0...v1.0.1) (2017-09-05)
 
