@@ -28,9 +28,7 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "glob": "^7.1.2",
-    "lodash": "^4.17.4",
-    "make-dir": "^1.0.0",
+    "lodash.kebabcase": "^4.1.1",
     "nock": "^9.0.13",
     "rev-hash": "^2.0.0"
   },
@@ -38,13 +36,13 @@
     "@types/del": "3.0.1",
     "@types/glob": "5.0.35",
     "@types/jest": "21.1.10",
-    "@types/lodash": "4.14.114",
-    "@types/make-dir": "1.0.3",
+    "@types/lodash.kebabcase": "4.1.4",
     "@types/nock": "9.3.0",
-    "@types/node": "8.10.21",
+    "@types/node": "4.2.23",
     "@types/request": "2.47.1",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
+    "glob": "7.1.2",
     "jest": "21.2.1",
     "prettier": "1.13.7",
     "prettier-config-ikatyang": "1.1.1",
@@ -52,13 +50,12 @@
     "standard-version": "4.4.0",
     "ts-jest": "21.2.4",
     "tslint": "5.11.0",
-    "tslint-config-ikatyang": "2.5.1",
     "tslint-config-prettier": "1.14.0",
     "tslint-plugin-prettier": "1.3.0",
-    "typescript": "2.6.2"
+    "typescript": "2.9.2"
   },
   "peerDependencies": {
-    "jest": "^20.0.0 || ^21.0.0"
+    "jest": ">= 20"
   },
   "engines": {
     "node": ">= 4"

@@ -1,12 +1,11 @@
 import { Action } from '../action';
-import { enable_net_connect, restore } from '../utils';
+import { activate, deactivate, enableNetConnect } from '../nock';
 
 export class RealAction extends Action {
   public start() {
-    restore();
-    enable_net_connect();
+    activate();
   }
   public finish() {
-    // do nothing
+    deactivate();
   }
 }

@@ -1,3 +1,5 @@
+require('../../src/index').setup(__dirname, 'run');
+
 import * as request from 'request';
 
 test('should mock correctly', done => {

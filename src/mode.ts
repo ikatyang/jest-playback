@@ -1,13 +1,11 @@
-import _ = require('lodash');
-import { Action } from './action';
-import {
-  PlayAction,
-  RealAction,
-  RecordAction,
-  RunAction,
-} from './actions/index';
+import { PlayAction } from './actions/play';
+import { RealAction } from './actions/real';
+import { RecordAction } from './actions/record';
+import { RunAction } from './actions/run';
 
-export const enum Mode {
+export const modeEnv = 'JEST_PLAYBACK_MODE';
+
+export enum Mode {
   /**
    * - http: `true`
    * - play: `true`
@@ -34,17 +32,17 @@ export const enum Mode {
   Real = 'real',
 }
 
-export function mode_to_action(mode: Mode, mode_env: string): Action {
-  switch (_.defaultTo<string>(process.env[mode_env], mode)) {
-    case Mode.Run:
-      return new RunAction();
+export function getActionClass(mode: Mode) {
+  switch (mode) {
     case Mode.Play:
-      return new PlayAction();
-    case Mode.Record:
-      return new RecordAction();
+      return PlayAction;
     case Mode.Real:
-      return new RealAction();
+      return RealAction;
+    case Mode.Record:
+      return RecordAction;
+    case Mode.Run:
+      return RunAction;
     default:
-      throw new Error(`Unexpected mode '${mode}'`);
+      throw new Error(`Unexpected mode "${mode}"`);
   }
 }

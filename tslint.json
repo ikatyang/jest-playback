@@ -1,11 +1,12 @@
 {
   "extends": [
-    "tslint-config-ikatyang",
+    "tslint:recommended",
     "tslint-config-prettier",
     "tslint-plugin-prettier"
   ],
   "rules": {
     "prettier": true,
-    "prefer-function-over-method": false
+    "object-literal-sort-keys": false,
+    "interface-name": false
   }
 }

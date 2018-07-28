@@ -11,99 +11,57 @@ Record and playback http requests from your [Jest](https://facebook.github.io/je
 
 ```sh
 # using npm
-npm install --save-dev jest jest-playback
+npm install --save-dev jest-playback jest
 
 # using yarn
-yarn add --dev jest jest-playback
+yarn add --dev jest-playback jest
 ```
-
-**NOTE**: This project uses the [`reporters`](https://facebook.github.io/jest/docs/en/configuration.html#reporters-array-modulename-modulename-options) field, which is available since Jest v20.
 
 ## Usage
 
-Modify your [Jest config](https://facebook.github.io/jest/docs/en/configuration.html) so that looks something like:
 
-(./package.json)
+```js
+// records are stored in `${__dirname}/__playbacks__`.
+require("jest-playback").setup(__dirname);
 
-```json
-{
-  "scripts": {
-    "test": "jest"
-  },
-  "jest": {
-    "reporters": [
-      "default",
-      "jest-playback"
-    ]
-  }
-}
+const request = require("request");
+
+test("example", done => {
+  request('http://www.example.com/', (_err, _res, body) => {
+    expect(body).toMatchSnapshot();
+    done();
+  });
+});
 ```
 
-If you just want to record requests:
+You can control which [mode](#modes) to use by specifying the second argument of `setup`:
+
+```js
+require("jest-playback").setup(__dirname, "record");
+```
+
+or via the `JEST_PLAYBACK_MODE` environment variable:
 
 ```sh
-JEST_PLAYBACK_MODE=record npm run test
+JEST_PLAYBACK_MODE=record npx jest
 ```
-
-If you just want to playback records:
-
-```sh
-JEST_PLAYBACK_MODE=play npm run test
-```
-
-**NOTE** The default mode is `run`, which will playback records and still allow unmocked requests.
 
 ## Modes
 
-- run
+- `run` (default)
   - play records
   - enable net connet
 
-- play
+- `play`
   - play records
   - disable net connet
 
-- record
+- `record`
   - enable net connect
   - record all requests
 
-- real
+- `real`
   - enable net connect
-
-## Configs
-
-configs are in the reporter's second field:
-
-```json
-{
-  "jest": {
-    "reporters": [
-      "default",
-      ["jest-playback", {"option": "value"}]
-    ]
-  }
-}
-```
-
-- debug
-  - type: boolean
-  - default: `false`
-  - display debug message
-
-- playbacks
-  - type: string
-  - default: `<rootDir>/playbacks`
-  - specify directory to store records
-
-- mode
-  - type: string
-  - default: `run`
-  - specify which [mode](#modes) to use
-
-- mode_env
-  - type: string
-  - default: `JEST_PLAYBACK_MODE`
-  - specify what environment variable to be used as mode, has higher priority than `mode`
 
 ## Development
 
