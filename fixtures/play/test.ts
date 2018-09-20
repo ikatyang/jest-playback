@@ -29,3 +29,10 @@ test('should return undefined for unmocked scope', done => {
     done();
   });
 });
+
+test('should return undefined for unmocked scope 2', done => {
+  request('http://example.org/?this=that', (_err, _res, body) => {
+    expect(body).toBeUndefined();
+    done();
+  });
+});
