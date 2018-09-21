@@ -9,6 +9,14 @@ test('should mock correctly', done => {
   });
 });
 
+test('should return real content for unmocked scope (parameters)', done => {
+  request('https://google.com/?something=true', (_err, _res, body) => {
+    expect(body).toBeDefined();
+    expect(body).not.toBe('mocked content');
+    done();
+  });
+});
+
 test('should return real content for unmocked scope', done => {
   request('https://www.google.com/', (_err, _res, body) => {
     expect(body).toBeDefined();

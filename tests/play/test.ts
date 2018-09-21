@@ -23,6 +23,13 @@ test('should mock correctly for other scope', done => {
   });
 });
 
+test('should return undefined for unmocked scope (parameters)', done => {
+  request('http://example.org/?this=that', (_err, _res, body) => {
+    expect(body).toBeUndefined();
+    done();
+  });
+});
+
 test('should return undefined for unmocked scope', done => {
   request('http://something.else/', (_err, _res, body) => {
     expect(body).toBeUndefined();
