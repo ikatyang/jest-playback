@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/ikatyang/jest-playback/compare/v2.0.0...v2.0.1) (2018-09-21)
+
+
+### Bug Fixes
+
+* **play:** disable allowUnmocked ([#328](https://github.com/ikatyang/jest-playback/issues/328)) ([4ebeb6d](https://github.com/ikatyang/jest-playback/commit/4ebeb6d))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/ikatyang/jest-playback/compare/v1.0.1...v2.0.0) (2018-07-28)
 
