@@ -21,8 +21,8 @@
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn run build",
-    "lint": "tslint -p ./tsconfig.json --type-check",
-    "test": "jest -c ./jest.json",
+    "lint": "tslint -p .",
+    "test": "jest",
     "prebuild": "rm -rf ./lib",
     "build": "tsc -p tsconfig.build.json",
     "release": "standard-version"

@@ -1,8 +1,0 @@
-{
-  "testEnvironment": "node",
-  "moduleFileExtensions": ["ts", "js", "json"],
-  "testMatch": ["**/*.ts"],
-  "transform": {"\\.ts$": "ts-jest/preprocessor"},
-  "coverageReporters": ["lcov", "text-summary"],
-  "setupTestFrameworkScriptFile": "<rootDir>/../setup.ts"
-}
