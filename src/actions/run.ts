@@ -5,7 +5,7 @@ export class RunAction extends Action {
   public start() {
     activate();
     enableNetConnect();
-    playRecord(this.playbackDir);
+    playRecord(this.playbackDir, true);
   }
   public finish() {
     deactivate();
