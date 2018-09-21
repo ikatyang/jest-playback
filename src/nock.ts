@@ -34,9 +34,6 @@ export function finishRecord(playbackDir: string) {
 }
 
 export function playRecord(playbackDir: string) {
-  const records = loadRecords(playbackDir).map(record => ({
-    ...record,
-    options: { ...record.options, allowUnmocked: true },
-  }));
+  const records = loadRecords(playbackDir);
   nock.define(records).forEach(scope => scope.persist());
 }
