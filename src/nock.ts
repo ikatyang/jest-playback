@@ -33,7 +33,12 @@ export function finishRecord(playbackDir: string) {
   nock.recorder.clear();
 }
 
-export function playRecord(playbackDir: string) {
+export function playRecord(playbackDir: string, allowUnmocked: boolean) {
   const records = loadRecords(playbackDir);
+
+  for (const record of records) {
+    record.options = { ...record.options, allowUnmocked };
+  }
+
   nock.define(records).forEach(scope => scope.persist());
 }
