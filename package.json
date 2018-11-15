@@ -38,7 +38,7 @@
     "@types/jest": "21.1.10",
     "@types/lodash.kebabcase": "4.1.4",
     "@types/nock": "9.3.0",
-    "@types/node": "4.9.1",
+    "@types/node": "10.12.8",
     "@types/request": "2.48.1",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
