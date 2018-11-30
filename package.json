@@ -28,6 +28,7 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "json-stable-stringify": "^1.0.1",
     "lodash.kebabcase": "^4.1.1",
     "nock": "^9.0.13",
     "rev-hash": "^2.0.0"
@@ -36,6 +37,7 @@
     "@types/del": "3.0.1",
     "@types/glob": "7.1.1",
     "@types/jest": "21.1.10",
+    "@types/json-stable-stringify": "1.0.32",
     "@types/lodash.kebabcase": "4.1.4",
     "@types/nock": "9.3.0",
     "@types/node": "4.9.1",

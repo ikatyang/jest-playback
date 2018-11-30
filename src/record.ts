@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import jsonStableStringify = require('json-stable-stringify');
 import kebabCase = require('lodash.kebabcase');
 import nock = require('nock');
 import * as path from 'path';
@@ -64,7 +65,13 @@ function getRecordBasename(record: nock.NockDefinition) {
   const [pathname] = record.path.split('?');
   const formattedPathname = kebabCase(pathname);
   const hash = revHash(
-    `${method}+${record.status}+${record.scope}+${record.path}+${record.body}`,
+    `${method}+${record.status}+${record.scope}+${record.path}+${
+      record.body !== null && typeof record.body === 'object'
+        ? // https://github.com/ikatyang/jest-playback/issues/349
+          jsonStableStringify(record.body)
+        : // backward compatibility
+          record.body
+    }`,
   );
   return formattedPathname.length === 0
     ? `${method}+${hash}`
