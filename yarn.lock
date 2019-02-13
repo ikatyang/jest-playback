@@ -38,9 +38,9 @@
   version "1.0.32"
   resolved "https://registry.yarnpkg.com/@types/json-stable-stringify/-/json-stable-stringify-1.0.32.tgz#121f6917c4389db3923640b2e68de5fa64dda88e"
 
-"@types/lodash.kebabcase@4.1.4":
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/@types/lodash.kebabcase/-/lodash.kebabcase-4.1.4.tgz#9b9b1abb6d900df311ac82e5bf5d6441435e1ff4"
+"@types/lodash.kebabcase@4.1.5":
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/@types/lodash.kebabcase/-/lodash.kebabcase-4.1.5.tgz#ee105026b3da401c9c387403e3267077460491c6"
   dependencies:
     "@types/lodash" "*"
 
