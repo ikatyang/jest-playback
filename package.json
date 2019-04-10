@@ -51,7 +51,7 @@
     "request": "2.88.0",
     "standard-version": "4.4.0",
     "ts-jest": "21.2.4",
-    "tslint": "5.14.0",
+    "tslint": "5.15.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.4.3"
