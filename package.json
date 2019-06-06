@@ -46,7 +46,7 @@
     "del": "3.0.0",
     "glob": "7.1.4",
     "jest": "21.2.1",
-    "prettier": "1.17.1",
+    "prettier": "1.18.0",
     "prettier-config-ikatyang": "1.1.1",
     "request": "2.88.0",
     "standard-version": "4.4.0",
