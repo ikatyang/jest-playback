@@ -30,7 +30,7 @@
   "dependencies": {
     "json-stable-stringify": "^1.0.1",
     "lodash.kebabcase": "^4.1.1",
-    "nock": "^9.0.13",
+    "nock": "^10.0.0",
     "rev-hash": "^2.0.0"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "@types/jest": "21.1.10",
     "@types/json-stable-stringify": "1.0.32",
     "@types/lodash.kebabcase": "4.1.6",
-    "@types/nock": "9.3.1",
+    "@types/nock": "10.0.3",
     "@types/node": "4.9.3",
     "@types/request": "2.48.1",
     "@types/rev-hash": "2.0.0",
