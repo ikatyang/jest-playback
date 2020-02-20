@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn run build",
+    "prepublish": "npm run build",
     "lint": "tslint -p .",
     "test": "jest",
     "prebuild": "rm -rf ./lib",

@@ -5,12 +5,14 @@ node_js:
 - 6
 - stable
 
+before_install:
+- npm install -g npm@5
+
 script:
-- yarn run lint
-- yarn run test -- --verbose
+- npm run lint
+- npm run test -- --verbose
 
 cache:
-  yarn: true
   directories:
   - node_modules
 
