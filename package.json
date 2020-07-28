@@ -30,7 +30,7 @@
   "dependencies": {
     "json-stable-stringify": "^1.0.1",
     "lodash.kebabcase": "^4.1.1",
-    "nock": "^13.0.3",
+    "nock": "^11.1.0",
     "rev-hash": "^2.0.0"
   },
   "devDependencies": {
@@ -39,8 +39,8 @@
     "@types/jest": "21.1.10",
     "@types/json-stable-stringify": "1.0.32",
     "@types/lodash.kebabcase": "4.1.6",
-    "@types/nock": "9.3.1",
-    "@types/node": "4.9.3",
+    "@types/nock": "^11.1.0",
+    "@types/node": "^8.10.62",
     "@types/request": "2.48.1",
     "@types/rev-hash": "2.0.0",
     "del": "3.0.0",
@@ -60,7 +60,7 @@
     "jest": ">= 20"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 8"
   },
   "files": [
     "/lib/**/*"
