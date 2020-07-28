@@ -8,7 +8,7 @@ import * as url from 'url';
 
 const PLAYBACK_EXTENSION = '.nock.json';
 
-export function loadRecords(playbackDir: string): nock.NockDefinition[] {
+export function loadRecords(playbackDir: string): nock.Definition[] {
   if (!fs.existsSync(playbackDir)) {
     return [];
   }
@@ -19,16 +19,10 @@ export function loadRecords(playbackDir: string): nock.NockDefinition[] {
     .reduce(concat)
     .filter(isFile)
     .filter(filename => filename.endsWith(PLAYBACK_EXTENSION))
-    .map(
-      filename =>
-        JSON.parse(fs.readFileSync(filename, 'utf8')) as nock.NockDefinition,
-    );
+    .map(filename => JSON.parse(fs.readFileSync(filename, 'utf8')));
 }
 
-export function writeRecords(
-  playbackDir: string,
-  records: nock.NockDefinition[],
-) {
+export function writeRecords(playbackDir: string, records: nock.Definition[]) {
   if (records.length === 0) {
     return;
   }
@@ -36,7 +30,7 @@ export function writeRecords(
   ensureDir(playbackDir);
 
   const hostnameMap: {
-    [hostname: string]: Array<[string, nock.NockDefinition]>;
+    [hostname: string]: Array<[string, nock.Definition]>;
   } = {};
 
   records.forEach(record => {
@@ -60,7 +54,7 @@ export function writeRecords(
   });
 }
 
-function getRecordBasename(record: nock.NockDefinition) {
+function getRecordBasename(record: nock.Definition) {
   const method = (record.method || 'unknown').toLowerCase();
   const [pathname] = record.path.split('?');
   const formattedPathname = kebabCase(pathname);
