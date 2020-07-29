@@ -28,7 +28,7 @@ export function startRecord() {
 }
 
 export function finishRecord(playbackDir: string) {
-  const records = nock.recorder.play() as nock.NockDefinition[];
+  const records = nock.recorder.play() as nock.Definition[];
   writeRecords(playbackDir, records);
   nock.recorder.clear();
 }
