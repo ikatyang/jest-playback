@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/ikatyang/jest-playback/compare/v2.0.2...v3.0.0) (2020-07-29)
+
+
+### Features
+
+* upgrade Nock to v13 ([#411](https://github.com/ikatyang/jest-playback/issues/411)) ([9ec364e](https://github.com/ikatyang/jest-playback/commit/9ec364e))
+
+
+### BREAKING CHANGES
+
+* require Node 10+
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/ikatyang/jest-playback/compare/v2.0.1...v2.0.2) (2018-11-30)
 
