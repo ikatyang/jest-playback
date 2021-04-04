@@ -12,8 +12,8 @@ export function deactivate() {
   nock.cleanAll();
 }
 
-export function enableNetConnect() {
-  nock.enableNetConnect();
+export function enableNetConnect(matcher?: string | RegExp | ((host: string) => boolean)) {
+  nock.enableNetConnect(matcher);
 }
 
 export function disableNetConnect() {
