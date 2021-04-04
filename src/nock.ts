@@ -12,7 +12,7 @@ export function deactivate() {
   nock.cleanAll();
 }
 
-export function enableNetConnect(matcher?: string | RegExp | ((host: string) => boolean)) {
+export function enableNetConnect(matcher?: string | RegExp | ((host: string) => boolean),) {
   nock.enableNetConnect(matcher);
 }
 
