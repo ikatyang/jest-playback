@@ -1,7 +1,7 @@
 {
   "name": "jest-playback",
   "type": "module",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Record and playback HTTP requests from your Jest tests",
   "keywords": [
     "jest",

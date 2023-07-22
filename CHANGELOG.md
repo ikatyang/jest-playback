@@ -1,6 +1,23 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+# [4.0.0](https://github.com/ikatyang/jest-playback/compare/v3.0.0...v4.0.0) (2023-07-22)
+
+### Features
+
+- rewrite with `@mswjs/interceptors` ([#432](https://github.com/ikatyang/jest-playback/issues/432)) ([cb66cf5](https://github.com/ikatyang/jest-playback/commit/cb66cf543d276196d5fd3394ec4bd92fe4e67247))
+  - use snapshot to store records
+  - store records by test by request
+  - support custom request cache key
+  - compatible with Vitest
+
+### BREAKING CHANGES
+
+- this package is now pure ESM
+- this package now requires Node 18+
+- the record format has been changed
+- `Mode` has been replaced by the Jest `--ci`/`--update-snapshot` flag
 
 <a name="3.0.0"></a>
 
