@@ -1,84 +1,65 @@
 # jest-playback
 
 [![npm](https://img.shields.io/npm/v/jest-playback.svg)](https://www.npmjs.com/package/jest-playback)
-[![build](https://img.shields.io/travis/ikatyang/jest-playback/master.svg)](https://travis-ci.org/ikatyang/jest-playback/builds)
+[![build](https://img.shields.io/github/actions/workflow/status/ikatyang/jest-playback/test.yml)](https://github.com/ikatyang/jest-playback/actions?query=branch%3Amaster)
 
-Record and playback http requests from your [Jest](https://facebook.github.io/jest/) tests
+Record and playback HTTP requests from your Jest tests
 
 [Changelog](https://github.com/ikatyang/jest-playback/blob/master/CHANGELOG.md)
 
 ## Install
 
 ```sh
-# using npm
-npm install --save-dev jest-playback jest
-
-# using yarn
-yarn add --dev jest-playback jest
+npm install jest-playback
 ```
 
 ## Usage
 
+In setup file or test file:
 
 ```js
-// records are stored in `${__dirname}/__playbacks__`.
-require("jest-playback").setup(__dirname);
-
-const request = require("request");
-
-test("example", done => {
-  request('http://www.example.com/', (_err, _res, body) => {
-    expect(body).toMatchSnapshot();
-    done();
-  });
-});
+import setupPlayback from 'jest-playback'
+await setupPlayback()
 ```
 
-You can control which [mode](#modes) to use by specifying the second argument of `setup`:
+The HTTP responses are stored as snapshots:
 
-```js
-require("jest-playback").setup(__dirname, "record");
+- default
+  - new requests will be stored
+  - stored records will be played
+- with Jest `--ci` flag specified
+  - new requests will be blocked
+  - stored records will be played
+- with Jest `--update-snapshot` flag specified
+  - new requests will be stored
+  - stored records will be updated
+  - obsolete records will be removed
+
+## API
+
+```ts
+declare function setupPlayback(options?: Options): Promise<void>
+
+interface Options {
+  getRequestCacheKey?: (request: Request) => string | Promise<string>
+}
 ```
-
-or via the `JEST_PLAYBACK_MODE` environment variable:
-
-```sh
-JEST_PLAYBACK_MODE=record npx jest
-```
-
-## Modes
-
-- `run` (default)
-  - play records
-  - enable net connet
-
-- `play`
-  - play records
-  - disable net connet
-
-- `record`
-  - enable net connect
-  - record all requests
-
-- `real`
-  - enable net connect
 
 ## Development
 
 ```sh
 # lint
-yarn run lint
+pnpm run lint
 
 # build
-yarn run build
+pnpm run build
 
-# test
-yarn run test
+# test with jest
+pnpm run test:jest
+
+# test with vitest
+pnpm run test:vitest
 ```
-
-## Related
-- [nock](https://github.com/node-nock/nock): HTTP mocking and expectations library
-- [ava-playback](https://github.com/dempfi/ava-playback): Record and playback http requests from your ava tests
 
 ## License
 

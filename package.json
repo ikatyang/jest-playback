@@ -1,16 +1,15 @@
 {
   "name": "jest-playback",
+  "type": "module",
   "version": "3.0.0",
-  "description": "Record and playback http requests from your Jest tests",
+  "description": "Record and playback HTTP requests from your Jest tests",
   "keywords": [
     "jest",
-    "nock",
     "playback",
     "record",
     "request"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "exports": "./lib/index.js",
   "repository": "https://github.com/ikatyang/jest-playback",
   "homepage": "https://github.com/ikatyang/jest-playback#readme",
   "author": {
@@ -20,48 +19,40 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run build",
-    "lint": "tslint -p .",
-    "test": "jest",
-    "prebuild": "rm -rf ./lib",
+    "prepack": "pnpm run build",
+    "lint": "prettier --check .",
+    "test:vitest": "vitest",
+    "test:jest": "NODE_OPTIONS=--experimental-vm-modules jest",
     "build": "tsc -p tsconfig.build.json",
     "release": "standard-version"
   },
   "dependencies": {
-    "json-stable-stringify": "^1.0.1",
-    "lodash.kebabcase": "^4.1.1",
-    "nock": "^13.0.3",
-    "rev-hash": "^2.0.0"
+    "@mswjs/interceptors": "^0.23.0",
+    "jest-snapshot-serializer-raw": "^2.0.0",
+    "mime-types": "^2.1.35"
   },
   "devDependencies": {
-    "@types/del": "3.0.1",
-    "@types/glob": "7.1.1",
-    "@types/jest": "21.1.10",
-    "@types/json-stable-stringify": "1.0.32",
-    "@types/lodash.kebabcase": "4.1.6",
-    "@types/node": "^10.17.28",
-    "@types/request": "2.48.1",
-    "@types/rev-hash": "2.0.0",
-    "del": "3.0.0",
-    "glob": "7.1.4",
-    "jest": "21.2.1",
-    "prettier": "1.18.2",
-    "prettier-config-ikatyang": "1.1.1",
-    "request": "2.88.0",
-    "standard-version": "8.0.2",
-    "ts-jest": "21.2.4",
-    "tslint": "5.15.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-plugin-prettier": "2.0.1",
-    "typescript": "3.5.2"
-  },
-  "peerDependencies": {
-    "jest": ">= 20"
+    "@types/jest": "29.5.3",
+    "@types/mime-types": "2.1.1",
+    "jest": "29.6.1",
+    "prettier": "3.0.0",
+    "standard-version": "9.5.0",
+    "ts-jest": "29.1.1",
+    "typescript": "5.1.6",
+    "vite": "4.4.4",
+    "vitest": "0.33.0"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">=18"
   },
   "files": [
-    "/lib/**/*"
-  ]
+    "/lib/**/*",
+    "/CHANGELOG.md"
+  ],
+  "packageManager": "pnpm@8.6.6",
+  "pnpm": {
+    "patchedDependencies": {
+      "@mswjs/interceptors@0.23.0": "patches/@mswjs__interceptors@0.23.0.patch"
+    }
+  }
 }
