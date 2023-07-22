@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index 65d41efcdb59e169edaad098963aee3d1585f442..4ad4f4e20c1e90d42a9869f7767c1806a4f2f462 100644
+--- a/package.json
++++ b/package.json
+@@ -1,5 +1,7 @@
+ {
+   "name": "@mswjs/interceptors",
++  "type": "module",
++  "FIXME": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/64856",
+   "description": "Low-level HTTP/HTTPS/XHR/fetch request interception library.",
+   "version": "0.23.0",
+   "main": "./lib/node/index.js",

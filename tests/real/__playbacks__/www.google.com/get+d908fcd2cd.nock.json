@@ -1,8 +1,0 @@
-{
-  "scope": "https://www.google.com:443",
-  "method": "GET",
-  "path": "/",
-  "body": "",
-  "status": 200,
-  "response": "mocked content"
-}
