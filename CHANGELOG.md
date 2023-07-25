@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [4.1.0](https://github.com/ikatyang/jest-playback/compare/v4.0.0...v4.1.0) (2023-07-25)
+
+### Features
+
+- support specifying mode ([#433](https://github.com/ikatyang/jest-playback/issues/433)) ([a920d2d](https://github.com/ikatyang/jest-playback/commit/a920d2d88ccc5a1a0c190515a35874078678e019))
+
 # [4.0.0](https://github.com/ikatyang/jest-playback/compare/v3.0.0...v4.0.0) (2023-07-22)
 
 ### Features
