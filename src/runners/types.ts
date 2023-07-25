@@ -19,7 +19,7 @@ interface SnapshotState {
   _updateSnapshot: SnapshotUpdateState
 }
 
-type SnapshotUpdateState = 'all' | 'new' | 'none'
+export type SnapshotUpdateState = 'all' | 'new' | 'none'
 type SnapshotData = Record<string, string>
 
 interface PrettyFormatPlugin {

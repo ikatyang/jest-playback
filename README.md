@@ -15,33 +15,52 @@ npm install jest-playback
 
 ## Usage
 
-In setup file or test file:
-
 ```js
-import setupPlayback from 'jest-playback'
-await setupPlayback()
+import * as jestPlayback from 'jest-playback'
+
+await jestPlayback.setup()
+
+test('example', async () => {
+  const response = await fetch('http://www.example.com/')
+  expect(response.status).toBe(200)
+})
 ```
 
-The HTTP responses are stored as snapshots:
-
-- default
-  - new requests will be stored
-  - stored records will be played
-- with Jest `--ci` flag specified
-  - new requests will be blocked
-  - stored records will be played
-- with Jest `--update-snapshot` flag specified
-  - new requests will be stored
-  - stored records will be updated
-  - obsolete records will be removed
+The records are stored as snapshots.
 
 ## API
 
 ```ts
-declare function setupPlayback(options?: Options): Promise<void>
+export default setup
+export declare function setup(options?: Options): Promise<void>
 
-interface Options {
+export interface Options {
+  /** @default Mode.Auto */
+  mode?: Mode
   getRequestCacheKey?: (request: Request) => string | Promise<string>
+}
+
+export enum Mode {
+  /**
+   * - `Mode.Update` if Jest `--update-snapshot` flag specified
+   * - `Mode.Play` if Jest `--ci` flag specified
+   * - `Mode.Record` otherwise
+   */
+  Auto = 'auto',
+  /**
+   * - all requests are recorded
+   */
+  Update = 'update',
+  /**
+   * - play records
+   * - new requests are blocked
+   */
+  Play = 'play',
+  /**
+   * - play records
+   * - new requests are recorded
+   */
+  Record = 'record',
 }
 ```
 
