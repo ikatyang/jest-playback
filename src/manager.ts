@@ -2,7 +2,8 @@ import assert from 'node:assert'
 import serializerRaw, { wrap } from 'jest-snapshot-serializer-raw'
 import { Options, defaultGetRequestCacheKey } from './options.js'
 import { fromResponseRecordText, toResponseRecordText } from './records.js'
-import { Runner } from './runners/types.js'
+import { Mode } from './modes.js'
+import { Runner, SnapshotUpdateState } from './runners/types.js'
 
 const INTERNAL_HEADER = 'X-Jest-Playback-Internal'
 
@@ -33,7 +34,8 @@ export class PlaybackManager {
     const snapshot = _snapshotData[snapshotId]?.replace(/^\n|\n$/g, '') as
       | string
       | undefined
-    switch (_updateSnapshot) {
+    const updateState = this.getSnapshotUpdateState() ?? _updateSnapshot
+    switch (updateState) {
       case 'none':
         assert(snapshot, 'playback not found')
         return await this.play(snapshot, snapshotName)
@@ -44,8 +46,25 @@ export class PlaybackManager {
       case 'all':
         return await this.record(request, snapshotName)
       default:
-        _updateSnapshot satisfies never
-        throw new Error(`Unexpected _updateSnapshot ${_updateSnapshot}`)
+        updateState satisfies never
+        throw new Error(`Unexpected updateState ${updateState}`)
+    }
+  }
+
+  private getSnapshotUpdateState(): SnapshotUpdateState | null {
+    const mode = this.options.mode ?? Mode.Auto
+    switch (mode) {
+      case Mode.Auto:
+        return null
+      case Mode.Play:
+        return 'none'
+      case Mode.Record:
+        return 'new'
+      case Mode.Update:
+        return 'all'
+      default:
+        mode satisfies never
+        throw new Error(`unexpected mode '${mode}'`)
     }
   }
 

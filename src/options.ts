@@ -1,6 +1,9 @@
 import crypto from 'node:crypto'
+import { Mode } from './modes.js'
 
 export interface Options {
+  /** @default Mode.Auto */
+  mode?: Mode
   getRequestCacheKey?: (request: Request) => string | Promise<string>
 }
 
